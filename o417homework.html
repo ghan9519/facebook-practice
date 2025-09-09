@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        body {
+            margin: 0;
+            height: 5000px;
+        }
+
+        #nav {
+            background-color: aqua;
+            width: 100%;
+            height: 56px;
+            position: fixed;
+            z-index: 9;
+        }
+
+        #nav-left {
+            background-color: rgb(0, 0, 0);
+            width: 25%;
+            height: 56px;
+            position: absolute;
+        }
+
+        #fb {
+            background-color: brown;
+            background-image: url(./fb-svg/fb-.svg);
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 15px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        #search {
+            background-color: rgb(41, 41, 41);
+            width: 240px;
+            height: 40px;
+            position: absolute;
+            left: 70px;
+            top: 8px;
+            border-radius: 35px;
+
+        }
+
+        #search-box {
+            background-image: url(./fb-svg/search.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 7.5px;
+            top: 7.5px;
+            border-radius: 50%;
+
+        }
+
+        #search-text {
+
+            color: aliceblue;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 40px;
+            top: 11px;
+
+        }
+
+
+        #nav-mid {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            height: 56px;
+            position: absolute;
+            left: 25%;
+        }
+
+        #nav-mid-1 {
+
+            background-image: url(./fb-svg/mid-1.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: calc((100% - (100%/6)) - 12.5px);
+            top: 15.5px;
+
+        }
+
+        #nav-mid-2 {
+            background-image: url(./fb-svg/mid-2.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: calc((100% - (100%/6)*2) - 12.5px);
+            top: 15.5px;
+        }
+
+        #nav-mid-3 {
+            background-image: url(./fb-svg/mid-3.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: calc(100%/2 - 12.5px);
+            top: 15.5px;
+        }
+
+        #nav-mid-4 {
+            background-image: url(./fb-svg/mid-4.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: calc((100% - (100%/6)*2) - 12.5px);
+            top: 15.5px;
+        }
+
+        #nav-mid-5 {
+            background-image: url(./fb-svg/mid5.svg);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: calc((100% - (100%/6)) - 12.5px);
+            top: 15.5px;
+
+        }
+
+        #nav-right {
+            background-color: rgb(0, 0, 0);
+            width: 25%;
+            height: 56px;
+            position: absolute;
+            right: 0;
+        }
+
+        #nav-right-1-circle {
+            background-color: rgb(41, 41, 41);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 180px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        #nav-right-1 {
+            background-color: rgb(41, 41, 41);
+            background-image: url(./fb-svg/right-1.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        #nav-right-2-circle {
+            background-color: rgb(41, 41, 41);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 125px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        #nav-right-2 {
+            background-color: rgb(41, 41, 41);
+            background-image: url(./fb-svg/right-2.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        #nav-right-3-circle {
+            background-color: rgb(41, 41, 41);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 70px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        #nav-right-3 {
+            background-color: rgb(41, 41, 41);
+            background-image: url(./fb-svg/right-3.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        #nav-right-4-circle {
+            background-color: rgb(41, 41, 41);
+            background-image: url(./img/大頭.jpg);
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        #nav-right-4 {
+            background-color: rgb(41, 41, 41);
+            background-image: url(./fb-svg/down.svg);
+            background-position: 1px 1.3px;
+            background-size: 10px;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+
+        }
+
+        #all {
+            /* background-color: rgb(249, 249, 188); */
+            background-color: rgb(29, 28, 28);
+            width: 100%;
+            height: 3000px;
+            margin: auto;
+            padding-top: 56px;
+        }
+
+        #banner {
+            background-color: blueviolet;
+            width: 80%;
+            height: 400px;
+            margin: auto;
+            background-image: url(./img/banner.jpeg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: relative;
+        }
+
+        #human {
+            background-color: brown;
+            background-image: url(./img/大頭.jpg);
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 50px;
+            bottom: -90px;
+            border-radius: 50%;
+
+        }
+    
+        #camera-circle {
+            background-color: rgb(0, 0, 0);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+        }
+
+        #camera {
+            background-image: url(./img/manyimage.png);
+            background-size: 23px;
+            background-position: 1.4px 71px;
+            width: 20px;
+            height: 18px;
+            position: absolute;
+            left: calc(50% - 20px/2);
+            top: calc(50% - 18px/2);
+            filter: invert();
+
+        }
+
+        #information {
+            width: 100%;
+            height: 103px;
+            position: absolute;
+            bottom: -103px;
+        }
+
+        #name {
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 220px;
+            top: 30px;
+        }
+
+        #friend {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            position: absolute;
+            left: 220px;
+            top: 60px;
+        }
+
+        #limit {
+            background-color: blue;
+            width: 151px;
+            height: 36px;
+            position: absolute;
+            right: 220px;
+            top:calc(60px - 20px/2);
+            border-radius: 8px;
+        }
+
+        #limit-box {
+
+            background-image: url(./img/plus.png);
+            background-size: cover;
+            filter: invert();
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 7.5px;
+            top: calc(50% - 20px/2);
+            border-radius: 50%;
+
+        }
+
+        #limit-text {
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 36px;
+            top: calc(50% - 20px/2);
+
+        }
+
+        #file {
+            background-color: rgb(41, 41, 41);
+            width: 136px;
+            height: 36px;
+            position: absolute;
+            right: 74px;
+            top: calc(60px - 20px/2);
+            border-radius: 8px;
+        }
+
+        #file-box {
+            background-image: url(./img/編輯.png);
+            background-size: cover;
+            filter: invert();
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 7.5px;
+            top: calc(50% - 20px/2);
+            border-radius: 50%;
+        }
+
+        #file-text {
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 36px;
+            top: calc(50% - 20px/2);
+        }
+
+        #down {
+            background-color: rgb(41, 41, 41);
+            width: 48px;
+            height: 36px;
+            position: absolute;
+            right: 16px;
+            top: calc(60px - 20px/2);
+            border-radius: 8px;
+        }
+
+        #down-box {
+
+            background-image: url(./fb-svg/down.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: calc((48px - 20px)/2);
+            top: calc((36px - 20px)/2);
+            border-radius: 50%;
+        }
+
+        #line {
+            background-color: rgb(255, 255, 255);
+            width: 96%;
+            height: 1px;
+            position: absolute;
+            bottom: -10px;
+            left: 30px;
+        } 
+        #other{
+
+            width: 96%;
+            height: 60px;
+            position: absolute;
+            left: 30px;
+            bottom: -70px;
+
+        }
+        #other-1
+        {
+      
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:0px
+
+            
+        }
+        #other-1-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-2
+        {
+            
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:62px
+            
+        }
+        #other-2-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-3
+        {
+            
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:124px
+            
+        }
+        #other-3-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-4
+        {
+            
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:186px
+            
+        }
+        #other-4-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-5
+        {
+            
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:248px
+            
+        }
+        #other-5-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-6
+        {
+            
+            width: 92px;
+            height: 60px;
+            position: absolute;
+            left:310px
+            
+        }
+        #other-6-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-7
+        {
+            width: 62px;
+            height: 60px;
+            position: absolute;
+            left:402px
+            
+        }
+        #other-7-text{
+            color: aliceblue;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 17px;
+            top: calc(50% - 20px/2);
+        }
+        #other-8
+        {
+            width: 20px;
+            height: 60px;
+            position: absolute;
+            left:462px
+            
+        }
+        #other-8-box{
+            background-image: url(./fb-svg/3dwn.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 20px/2);
+        }
+        #other-9
+        {
+            background-color: rgb(41, 41, 41);
+            width: 48px;
+            height: 36px;
+            position: absolute;
+            right: 0px;
+            top: calc(50% - 36px/2);
+            border-radius: 8px;
+            
+        }
+        #other-9-box{
+            background-image: url(./fb-svg/more.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: calc((48px - 20px)/2);
+            top: calc((36px - 20px)/2);
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="nav-left">
+            <div id="fb"></div>
+            <div id="search">
+                <div id="search-box"></div>
+                <div id="search-text">搜尋 Facebook</div>
+            </div>
+        </div>
+        <div id="nav-mid">
+            <div id="nav-mid-1"></div>
+            <div id="nav-mid-2"></div>
+            <div id="nav-mid-3"></div>
+            <div id="nav-mid-4"></div>
+            <div id="nav-mid-5"></div>
+        </div>
+        <div id="nav-right">
+            <div id="nav-right-1-circle">
+                <div id="nav-right-1"></div>
+            </div>
+            <div id="nav-right-2-circle">
+                <div id="nav-right-2"></div>
+            </div>
+            <div id="nav-right-3-circle">
+                <div id="nav-right-3"></div>
+            </div>
+            <div id="nav-right-4-circle">
+                <div id="nav-right-4"></div>
+            </div>
+        </div>
+    </div>
+    <div id="all">
+        <div id="banner">
+            <div id="human">
+                <div id="camera-circle">
+                    <div id="camera"></div>
+                </div>
+            </div>
+            <div id="information">
+                <div id="name">Ji-Han Chen</div>
+                <div id="friend">793位朋友</div>
+                <div id="limit">
+                    <div id="limit-box"></div>
+                    <div id="limit-text">新增到限時動態</div>
+                </div>
+                <div id="file">
+                    <div id="file-box"></div>
+                    <div id="file-text">編輯個人檔案</div>
+                </div>
+                <div id="down">
+                    <div id="down-box"></div>
+                </div>
+                            <div id="line"></div>
+            <div id="other">
+                <div id="other-1">
+                    <div id="other-1-text">貼文</div>
+                </div>
+                <div id="other-2">
+                    <div id="other-2-text">關於</div>
+                </div>
+                <div id="other-3">
+                    <div id="other-3-text">朋友</div>
+                </div>
+                <div id="other-4">
+                    <div id="other-4-text">相片</div>
+                </div>
+                <div id="other-5">
+                    <div id="other-5-text">影片</div>
+                </div>
+                <div id="other-6">
+                    <div id="other-6-text">打卡動態</div>
+                </div>
+                <div id="other-7">
+                    <div id="other-7-text">更多</div>
+                </div>
+                <div id="other-8">
+                    <div id="other-8-box"></div>
+                </div>
+                <div id="other-9">
+                    <div id="other-9-box"></div>
+            </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
